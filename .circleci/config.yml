@@ -12,7 +12,7 @@ commands:
               sudo ./aws/install
   
     install_ansible:
-    description: Install Ansible v2
+    description: Install Ansible v2.
     steps:
       - run:
           name: Install Ansible v2
