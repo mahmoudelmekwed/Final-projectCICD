@@ -10,7 +10,7 @@
     dest: ~/backend-app
 
 - name: "Installing Node Dependencies"
-  shell: |
+  command: |
     cd ~/backend-app
     npm i
 
