@@ -272,7 +272,7 @@ jobs:
             tar -czvf artifact-"${CIRCLE_WORKFLOW_ID:0:7}".tar.gz dist
             aws s3 cp dist s3://udapeople-${CIRCLE_WOKFLOW_ID:0:7} --recursive
       
-      - destroy-environment
+      # - destroy-environment
       - revert-migrations
            
                     
@@ -312,10 +312,10 @@ jobs:
             export TYPEORM_MIGRATIONS=./migrations/*.ts
 
             cd .circleci/ansible
-            cat .inventory.txt
+            cat inventory.txt
             ansible-playbook -i inventory.txt deploy-backend.yml
 
-      - destroy-environment
+      # - destroy-environment
       - revert-migrations
        
 
